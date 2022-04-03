@@ -1,4 +1,4 @@
-package com.example.hr_project;
+package com.example.flutter_payrollapp;
 
 import io.flutter.embedding.android.FlutterActivity;
 

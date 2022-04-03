@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:hr_project/model/employee.dart';
-import 'package:hr_project/model/employee_payload.dart';
+import 'package:flutter_payrollapp/model/employee.dart';
+import 'package:flutter_payrollapp/model/employeeModel.dart';
+import 'package:flutter_payrollapp/model/employee_payload.dart';
 
  import 'package:http/http.dart' as http;
 
@@ -27,6 +28,22 @@ Future<http.Response> signIn(EmployeePayload employee) async {
   return response;
 
 }
+
+
+Future<http.Response> getAllEmployee() async {
+  final response = await http
+      .post(Uri.parse(getAllEmployeeApi));
+  return  response;
+
+
+}
+Future<http.Response> addEmp([employeeModel? empModel]) async {
+  final response = await http
+      .post(Uri.parse(saveEmployeeApi),
+  headers: requestHeaders, body: jsonEncode(empModel?.toMap()));
+  return response;
+}
+
 
 // Future<http.Response> getTotalInfo() async {
 //   final response = await http.get(Uri.parse(totalInfoApi),

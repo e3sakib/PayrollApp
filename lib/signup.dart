@@ -4,9 +4,9 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hr_project/helper/http_helper.dart';
-import 'package:hr_project/login.dart';
-import 'package:hr_project/model/employee.dart';
+import 'package:flutter_payrollapp/helper/http_helper.dart';
+import 'package:flutter_payrollapp/login.dart';
+import 'package:flutter_payrollapp/model/employee.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 

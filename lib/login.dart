@@ -3,11 +3,11 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hr_project/HomeP.dart';
-import 'package:hr_project/helper/http_helper.dart';
-import 'package:hr_project/home.dart';
-import 'package:hr_project/model/employee_payload.dart';
-import 'package:hr_project/signup.dart';
+import 'package:flutter_payrollapp/HomeP.dart';
+import 'package:flutter_payrollapp/helper/http_helper.dart';
+import 'package:flutter_payrollapp/home.dart';
+import 'package:flutter_payrollapp/model/employee_payload.dart';
+import 'package:flutter_payrollapp/signup.dart';
 
 class MyLogin extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _MyLoginState extends State<MyLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hr Management"),
+        title: Text("Payroll"),
       ),
       body: MyLoginPage(),
     );
@@ -84,7 +84,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   print(map['status']);
                   if(map['status']=="Success"){
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => MyHomePageDrawer()));
+                        builder: (context) => Home()));
                   }
 
                 });
